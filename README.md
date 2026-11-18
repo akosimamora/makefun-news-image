@@ -8,7 +8,7 @@ One image summing up the world's news of Tuesday, 17 November 2026: the Kerch Br
 
 ```sh
 mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
-# writes out/entry.png (1024x1024 PNG, 133,882 bytes)
+# writes out/entry.png (1024x1024 PNG, 128,487 bytes)
 ```
 
 `main.ts` runs on Node 22, standard library only, no network. It resolves `entry.png` against its own directory, never the working directory, and writes byte-identical output on every run.
