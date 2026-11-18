@@ -1,6 +1,8 @@
 # The World in One Day — 17 November 2026
 
-[![make.fun · news-image-20261117](https://make.fun/badge/news-image-20261117.svg)](https://make.fun/bounty/news-image-20261117)
+[![make.fun · news-image-20261117](https://make.fun/badge/news-image-20261117.svg)](https://make.fun/bounty/news-image-20261117?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261117)
+[![rank](https://make.fun/badge/news-image-20261117/akosimamora/makefun-news-image/rank.svg)](https://make.fun/bounty/news-image-20261117/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261117)
+[![reward](https://make.fun/badge/news-image-20261117/akosimamora/makefun-news-image/reward.svg)](https://make.fun/bounty/news-image-20261117?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261117)
 
 One image summing up the world's news of Tuesday, 17 November 2026: the Kerch Bridge struck again, fire exchanged between the US and Iran in the Gulf, Trump landing in Manila on his way to Shenzhen, Nvidia's $115.8bn quarter, Japan scrambling jets, and ULA's Vulcan falling short — plus five more stories from the day. The image is drawn programmatically (PIL + DejaVu), so every word stays sharp; the program itself just copies the bundled image to the output directory.
 
