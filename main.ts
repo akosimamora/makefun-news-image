@@ -8,11 +8,21 @@
 // Outside the grader, MAKEFUN_OUTPUT_DIR stands in for /output:
 //   mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 
-import { copyFileSync } from 'node:fs';
+import { copyFileSync, mkdirSync, statSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
 const dir = dirname(fileURLToPath(import.meta.url));
 const outDir = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
+const src = join(dir, 'entry.png');
+const dst = join(outDir, 'entry.png');
 
-copyFileSync(join(dir, 'entry.png'), join(outDir, 'entry.png'));
+// The grader's output directory may not exist yet: create it first,
+// then copy and verify the copy is byte-complete before exiting.
+mkdirSync(outDir, { recursive: true });
+copyFileSync(src, dst);
+const { size: srcSize } = statSync(src);
+const { size: dstSize } = statSync(dst);
+if (dstSize !== srcSize) {
+  throw new Error(`entry.png copy incomplete: ${dstSize} of ${srcSize} bytes`);
+}
